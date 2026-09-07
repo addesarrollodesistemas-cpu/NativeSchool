@@ -1,0 +1,81 @@
+/* Estilos comunes del detalle de estudiante */
+.detail-page {
+  background-color: #f4f6fa;
+}
+
+.detail-header {
+  background-color: #1f6feb;
+  padding: 28 20 24 20;
+}
+
+.detail-avatar {
+  width: 72;
+  height: 72;
+  border-radius: 36;
+  margin-bottom: 10;
+  horizontal-align: center;
+}
+
+.detail-avatar-text {
+  color: #ffffff;
+  font-size: 28;
+  font-weight: 700;
+  horizontal-align: center;
+  vertical-align: center;
+}
+
+.detail-name {
+  color: #ffffff;
+  font-size: 22;
+  font-weight: 700;
+  horizontal-align: center;
+}
+
+.detail-grade {
+  color: #d7e6ff;
+  font-size: 14;
+  margin-top: 4;
+  horizontal-align: center;
+}
+
+.detail-info {
+  background-color: #ffffff;
+  margin: 16;
+  border-radius: 12;
+}
+
+.detail-row {
+  padding: 14 16;
+}
+
+.detail-row-icon {
+  color: #1f6feb;
+  font-size: 16;
+  width: 28;
+}
+
+.detail-row-text {
+  color: #1c1f26;
+  font-size: 15;
+  vertical-align: center;
+}
+
+.detail-platform {
+  background-color: #e8f0fe;
+  margin: 0 16 16 16;
+  border-radius: 12;
+  padding: 12 16;
+}
+
+.detail-platform-label {
+  color: #5f6b7a;
+  font-size: 11;
+  text-transform: uppercase;
+}
+
+.detail-platform-value {
+  color: #1f6feb;
+  font-size: 14;
+  font-weight: 600;
+  margin-top: 4;
+}

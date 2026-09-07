@@ -1,0 +1,41 @@
+/* Estilos exclusivos de Android:
+   - Tipografía y avatares más grandes (Material Design recomienda targets táctiles de 48dp).
+   - Elevación nativa (android-elevation) disponible únicamente en Android.
+   - Más separación en el encabezado. */
+.students-header {
+  padding: 18 22;
+}
+
+.students-header-icon {
+  width: 36;
+  height: 36;
+}
+
+.students-header-title {
+  font-size: 20;
+}
+
+.students-list-item {
+  border-radius: 14;
+  margin-bottom: 10;
+  android-elevation: 2;
+}
+
+.students-avatar {
+  width: 48;
+  height: 48;
+  border-radius: 24;
+}
+
+.students-avatar-text {
+  font-size: 18;
+}
+
+.students-name {
+  font-size: 17;
+}
+
+.students-subtitle {
+  font-size: 14;
+  margin-top: 4;
+}

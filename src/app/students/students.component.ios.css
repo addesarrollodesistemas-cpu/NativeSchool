@@ -1,0 +1,38 @@
+/* Estilos exclusivos de iOS:
+   - Tipografía y avatares más compactos (estilo HIG de Apple).
+   - Esquinas más suaves y sin elevación nativa (no existe android-elevation en iOS). */
+.students-header {
+  padding: 14 18;
+}
+
+.students-header-icon {
+  width: 28;
+  height: 28;
+}
+
+.students-header-title {
+  font-size: 17;
+}
+
+.students-list-item {
+  border-radius: 10;
+  margin-bottom: 10;
+}
+
+.students-avatar {
+  width: 40;
+  height: 40;
+  border-radius: 20;
+}
+
+.students-avatar-text {
+  font-size: 15;
+}
+
+.students-name {
+  font-size: 16;
+}
+
+.students-subtitle {
+  font-size: 13;
+}

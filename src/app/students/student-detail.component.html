@@ -1,0 +1,36 @@
+<ActionBar class="action-bar">
+  <NavigationButton text="Volver" android.systemIcon="ic_menu_back"></NavigationButton>
+  <Label class="action-bar-title" text="Detalle del estudiante"></Label>
+</ActionBar>
+
+<GridLayout *ngIf="student" rows="auto, auto, *" class="detail-page">
+  <StackLayout row="0" class="detail-header">
+    <GridLayout class="detail-avatar" backgroundColor="{{ getAvatarColor(student) }}">
+      <Label class="detail-avatar-text" text="{{ getInitials(student) }}"></Label>
+    </GridLayout>
+    <Label class="detail-name" text="{{ student.nombre }} {{ student.apellido }}"></Label>
+    <Label class="detail-grade" text="{{ student.grado }} · Sección {{ student.seccion }}"></Label>
+  </StackLayout>
+
+  <StackLayout row="1" class="detail-info">
+    <GridLayout columns="auto, *" class="detail-row">
+      <Label col="0" class="fas detail-row-icon" text="&#xf0e0;"></Label>
+      <Label col="1" class="detail-row-text" text="{{ student.email }}"></Label>
+    </GridLayout>
+    <StackLayout class="hr"></StackLayout>
+    <GridLayout columns="auto, *" class="detail-row">
+      <Label col="0" class="fas detail-row-icon" text="&#xf2c2;"></Label>
+      <Label col="1" class="detail-row-text" text="ID de estudiante: {{ student.id }}"></Label>
+    </GridLayout>
+    <StackLayout class="hr"></StackLayout>
+    <GridLayout columns="auto, *" class="detail-row">
+      <Label col="0" class="fas detail-row-icon" text="&#xf19d;"></Label>
+      <Label col="1" class="detail-row-text" text="Grado {{ student.grado }} · Sección {{ student.seccion }}"></Label>
+    </GridLayout>
+  </StackLayout>
+
+  <StackLayout row="2" class="detail-platform">
+    <Label class="detail-platform-label" text="Lógica TypeScript por plataforma"></Label>
+    <Label class="detail-platform-value" text="{{ platformInfo }}"></Label>
+  </StackLayout>
+</GridLayout>

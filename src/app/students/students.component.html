@@ -1,0 +1,40 @@
+<ActionBar class="action-bar">
+  <NavigationButton visibility="hidden"></NavigationButton>
+  <GridLayout columns="50, *">
+    <Label class="action-bar-title" text="Estudiantes" colSpan="2"></Label>
+
+    <Label class="fas" text="&#xf0c9;" (tap)="onDrawerButtonTap()"></Label>
+  </GridLayout>
+</ActionBar>
+
+<GridLayout rows="auto, auto, *" class="students-page">
+  <GridLayout row="0" columns="auto, *" rows="auto, auto" class="students-header">
+    <Image col="0" rowSpan="2" src="res://ic_school" class="students-header-icon"
+      [visibility]="isAndroid ? 'visible' : 'collapse'"></Image>
+    <Label col="1" row="0" class="students-header-title" text="Lista de estudiantes"></Label>
+    <Label col="1" row="1" class="students-header-count"
+      text="{{ students.length }} estudiantes registrados"></Label>
+  </GridLayout>
+
+  <StackLayout row="1" class="students-platform-card">
+    <Label class="students-platform-label" text="Plataforma detectada"></Label>
+    <Label class="students-platform-value" text="{{ platformInfo }}"></Label>
+  </StackLayout>
+
+  <ScrollView row="2">
+    <StackLayout class="students-list">
+      <GridLayout *ngFor="let student of students" columns="auto, *, auto" rows="auto, auto"
+        class="students-list-item" (tap)="onStudentTap(student)">
+        <GridLayout col="0" rowSpan="2" class="students-avatar"
+          backgroundColor="{{ getAvatarColor(student) }}">
+          <Label class="students-avatar-text" text="{{ getInitials(student) }}"></Label>
+        </GridLayout>
+        <Label col="1" row="0" class="students-name"
+          text="{{ student.nombre }} {{ student.apellido }}"></Label>
+        <Label col="1" row="1" class="students-subtitle"
+          text="{{ student.grado }} · Sección {{ student.seccion }}"></Label>
+        <Label col="2" rowSpan="2" class="fas students-chevron" text="&#xf054;"></Label>
+      </GridLayout>
+    </StackLayout>
+  </ScrollView>
+</GridLayout>
